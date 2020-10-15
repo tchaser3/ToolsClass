@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EF8E2A9-298F-46C8-91E3-9D79B6D6ACA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NewToolsDLL</RootNamespace>
+    <AssemblyName>NewToolsDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindActiveToolByToolIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveToolByToolIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveToolsByCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveToolsByCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveToolsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveToolsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAvailableActiveToolsByCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAvailableActiveToolsByCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAvailableActiveToolsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAvailableActiveToolsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindDashboardToolsByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindDashboardToolsByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindRetiredToolsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindRetiredToolsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSignedOutToolsByCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSignedOutToolsByCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSignedOutToolsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSignedOutToolsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindSpecificToolByToolIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSpecificToolByToolIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolByToolIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolByToolIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolByToolKeyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolByToolKeyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolsByCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolsByCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolsByEmployeeIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolsByEmployeeIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertToolsEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertToolsEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ToolsClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolActiveEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolActiveEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolAvailabilityEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolAvailabilityEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolCategoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolCategoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolCostEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolCostEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolCurrentLocationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolCurrentLocationEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolInfoEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolInfoEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateToolSignOutEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindActiveToolByToolIDDataSet.xsc">
+      <DependentUpon>FindActiveToolByToolIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveToolByToolIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveToolByToolIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveToolByToolIDDataSet.xss">
+      <DependentUpon>FindActiveToolByToolIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveToolsByCategoryDataSet.xsc">
+      <DependentUpon>FindActiveToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveToolsByCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveToolsByCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveToolsByCategoryDataSet.xss">
+      <DependentUpon>FindActiveToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveToolsDataSet.xsc">
+      <DependentUpon>FindActiveToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveToolsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveToolsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveToolsDataSet.xss">
+      <DependentUpon>FindActiveToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAvailableActiveToolsByCategoryDataSet.xsc">
+      <DependentUpon>FindAvailableActiveToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAvailableActiveToolsByCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAvailableActiveToolsByCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAvailableActiveToolsByCategoryDataSet.xss">
+      <DependentUpon>FindAvailableActiveToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAvailableActiveToolsDataSet.xsc">
+      <DependentUpon>FindAvailableActiveToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAvailableActiveToolsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAvailableActiveToolsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAvailableActiveToolsDataSet.xss">
+      <DependentUpon>FindAvailableActiveToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDashboardToolsByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindDashboardToolsByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindDashboardToolsByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindDashboardToolsByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindDashboardToolsByEmployeeIDDataSet.xss">
+      <DependentUpon>FindDashboardToolsByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindRetiredToolsDataSet.xsc">
+      <DependentUpon>FindRetiredToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindRetiredToolsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindRetiredToolsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindRetiredToolsDataSet.xss">
+      <DependentUpon>FindRetiredToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSignedOutToolsByCategoryDataSet.xsc">
+      <DependentUpon>FindSignedOutToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSignedOutToolsByCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSignedOutToolsByCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSignedOutToolsByCategoryDataSet.xss">
+      <DependentUpon>FindSignedOutToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSignedOutToolsDataSet.xsc">
+      <DependentUpon>FindSignedOutToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSignedOutToolsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSignedOutToolsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSignedOutToolsDataSet.xss">
+      <DependentUpon>FindSignedOutToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSpecificToolByToolIDDataSet.xsc">
+      <DependentUpon>FindSpecificToolByToolIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSpecificToolByToolIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSpecificToolByToolIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSpecificToolByToolIDDataSet.xss">
+      <DependentUpon>FindSpecificToolByToolIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolByToolIDDataSet.xsc">
+      <DependentUpon>FindToolByToolIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolByToolIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolByToolIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolByToolIDDataSet.xss">
+      <DependentUpon>FindToolByToolIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolByToolKeyDataSet.xsc">
+      <DependentUpon>FindToolByToolKeyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolByToolKeyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolByToolKeyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolByToolKeyDataSet.xss">
+      <DependentUpon>FindToolByToolKeyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolsByCategoryDataSet.xsc">
+      <DependentUpon>FindToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolsByCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolsByCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolsByCategoryDataSet.xss">
+      <DependentUpon>FindToolsByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolsByEmployeeIDDataSet.xsc">
+      <DependentUpon>FindToolsByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolsByEmployeeIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolsByEmployeeIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolsByEmployeeIDDataSet.xss">
+      <DependentUpon>FindToolsByEmployeeIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertToolsEntry.xsc">
+      <DependentUpon>InsertToolsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertToolsEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertToolsEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertToolsEntry.xss">
+      <DependentUpon>InsertToolsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ToolsDataSet.xsc">
+      <DependentUpon>ToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ToolsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ToolsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ToolsDataSet.xss">
+      <DependentUpon>ToolsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolActiveEntry.xsc">
+      <DependentUpon>UpdateToolActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolActiveEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolActiveEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolActiveEntry.xss">
+      <DependentUpon>UpdateToolActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolAvailabilityEntry.xsc">
+      <DependentUpon>UpdateToolAvailabilityEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolAvailabilityEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolAvailabilityEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolAvailabilityEntry.xss">
+      <DependentUpon>UpdateToolAvailabilityEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolCategoryEntry.xsc">
+      <DependentUpon>UpdateToolCategoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolCategoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolCategoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolCategoryEntry.xss">
+      <DependentUpon>UpdateToolCategoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolCostEntry.xsc">
+      <DependentUpon>UpdateToolCostEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolCostEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolCostEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolCostEntry.xss">
+      <DependentUpon>UpdateToolCostEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolCurrentLocationEntry.xsc">
+      <DependentUpon>UpdateToolCurrentLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolCurrentLocationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolCurrentLocationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolCurrentLocationEntry.xss">
+      <DependentUpon>UpdateToolCurrentLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolInfoEntry.xsc">
+      <DependentUpon>UpdateToolInfoEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolInfoEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolInfoEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolInfoEntry.xss">
+      <DependentUpon>UpdateToolInfoEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolSignOutEntry.xsc">
+      <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateToolSignOutEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateToolSignOutEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateToolSignOutEntry.xss">
+      <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
