@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteToolEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeleteToolEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindActiveToolByToolIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +173,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DeleteToolEntry.xsc">
+      <DependentUpon>DeleteToolEntry.xsd</DependentUpon>
+    </None>
+    <None Include="DeleteToolEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DeleteToolEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DeleteToolEntry.xss">
+      <DependentUpon>DeleteToolEntry.xsd</DependentUpon>
+    </None>
     <None Include="FindActiveToolByToolIDDataSet.xsc">
       <DependentUpon>FindActiveToolByToolIDDataSet.xsd</DependentUpon>
     </None>

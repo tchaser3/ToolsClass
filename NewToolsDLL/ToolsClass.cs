@@ -79,6 +79,26 @@ namespace NewToolsDLL
         FindToolsByCategoryDataSet aFindToolsByCategoryDataSet;
         FindToolsByCategoryDataSetTableAdapters.FindToolsByCategoryTableAdapter aFindToolsByCategoryTableAdapter;
 
+        DeleteToolEntryTableAdapters.QueriesTableAdapter aDeleteToolTableAdapters;
+
+        public bool DeleteTool(int intToolKey)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aDeleteToolTableAdapters = new DeleteToolEntryTableAdapters.QueriesTableAdapter();
+                aDeleteToolTableAdapters.DeleteTool(intToolKey);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Tools Class // Delete Tool " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public FindToolsByCategoryDataSet FindToolsByCategory(string strCategory)
         {
             try
