@@ -170,6 +170,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateWaspAssetLocationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWaspAssetLocationEntry.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -440,6 +445,17 @@
     </None>
     <None Include="UpdateToolSignOutEntry.xss">
       <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWaspAssetLocationEntry.xsc">
+      <DependentUpon>UpdateWaspAssetLocationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWaspAssetLocationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWaspAssetLocationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWaspAssetLocationEntry.xss">
+      <DependentUpon>UpdateWaspAssetLocationEntry.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
