@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NewToolsDLL</RootNamespace>
     <AssemblyName>NewToolsDLL</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -169,11 +170,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateWaspAssetLocationEntry.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>UpdateWaspAssetLocationEntry.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -445,17 +441,6 @@
     </None>
     <None Include="UpdateToolSignOutEntry.xss">
       <DependentUpon>UpdateToolSignOutEntry.xsd</DependentUpon>
-    </None>
-    <None Include="UpdateWaspAssetLocationEntry.xsc">
-      <DependentUpon>UpdateWaspAssetLocationEntry.xsd</DependentUpon>
-    </None>
-    <None Include="UpdateWaspAssetLocationEntry.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>UpdateWaspAssetLocationEntry.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="UpdateWaspAssetLocationEntry.xss">
-      <DependentUpon>UpdateWaspAssetLocationEntry.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

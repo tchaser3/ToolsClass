@@ -81,26 +81,6 @@ namespace NewToolsDLL
 
         DeleteToolEntryTableAdapters.QueriesTableAdapter aDeleteToolTableAdapters;
 
-        UpdateWaspAssetLocationEntryTableAdapters.QueriesTableAdapter aUpdateWaspAssetLocationTableAdpater;
-
-        public bool UpdateWaspAssetLocation(int intAssetID, string strAssetSite, string strAssetLocation)
-        {
-            bool blnFatalError = false;
-
-            try
-            {
-                aUpdateWaspAssetLocationTableAdpater = new UpdateWaspAssetLocationEntryTableAdapters.QueriesTableAdapter();
-                aUpdateWaspAssetLocationTableAdpater.UpdateWaspAssetLocation(intAssetID, strAssetSite, strAssetLocation);
-            }
-            catch (Exception Ex)
-            {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Tools Class // Update Wasp Asset Location " + Ex.Message);
-
-                blnFatalError = true;
-            }
-
-            return blnFatalError;
-        }
         public bool DeleteTool(int intToolKey)
         {
             bool blnFatalError = false;
